@@ -7,32 +7,43 @@
 body {
   background-color: #292524;
   color: #fafaf9;
+  font-family: "Sono", sans-serif;
   padding: 40px;
 }
 
 .header {
   margin-bottom: 40px;
+  /* Flexbox Settings */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  /* Flexbox Settings */
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
 .fact-form {
   background-color: #44403c;
-  font-family: "Sono", sans-serif;
   margin-bottom: 40px;
   padding: 16px 40px;
+  text-align: center;
 }
 
 h1 {
   font-size: 42px;
   text-transform: uppercase;
-  text-align: center;
   font-family: "Coiny", sans-serif;
-  color: #fafaf9;
+  line-height: 1;
+  margin-top: 6px;
 }
 
 .fact {
   font-size: 20px;
   line-height: 1.4;
-  color: #fafaf9;
   background-color: #44403c;
   margin-bottom: 16px;
   padding: 16px 24px;
@@ -42,7 +53,9 @@ h1 {
   text-transform: uppercase;
   font-size: 14px;
   font-family: "Coiny", sans-serif;
-  color: #fafaf9;
+  padding-top: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 ul {
