@@ -24,7 +24,7 @@
           />
           <h1>Today I Learned</h1>
         </div>
-        <button>Share A Fact</button>
+        <button class="btn">Share A Fact</button>
       </header>
 
       <form>
@@ -37,15 +37,38 @@
           <option value="science">Science</option>
           <option value="finance">Finance</option>
         </select>
-        <button>Post</button>
+        <button class="btn btn-large">Post</button>
       </form>
 
       <main class="main">
         <aside>
           <ul>
-            <li><button>All</button></li>
-            <li><button>Technology</button></li>
-            <li><button>Science</button></li>
+            <li class="category">
+              <button
+                class="btn btn-all-categories"
+                style="background-color: #3b82f6"
+              >
+                All
+              </button>
+            </li>
+
+            <li class="category">
+              <button
+                class="btn btn-category"
+                style="background-color: #3b82f6"
+              >
+                Technology
+              </button>
+            </li>
+
+            <li class="category">
+              <button
+                class="btn btn-category"
+                style="background-color: #16a34a"
+              >
+                Science
+              </button>
+            </li>
           </ul>
         </aside>
 
@@ -60,10 +83,10 @@
                   target="_blank"
                   >(Source)</a
                 >
+                <span class="tag" style="background-color: #3b82f6"
+                  >#technology#
+                </span>
               </p>
-              <span class="tag" style="background-color: #3b82f6"
-                >#technology#
-              </span>
 
               <div class="vote-buttons">
                 <button>👍 <strong>24</strong></button>
@@ -93,7 +116,6 @@
               </div>
             </li>
           </ul>
-          <p>Built by Art</p>
         </section>
       </main>
     </div>
