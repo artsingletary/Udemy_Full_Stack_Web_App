@@ -31,17 +31,16 @@ body {
   justify-content: space-between;
 }
 
-.fact-form {
-  background-color: #44403c;
-  margin-bottom: 40px;
-  padding: 16px 40px;
-  text-align: center;
-}
-
 .main {
   display: grid;
   grid-template-columns: 250px 1fr;
   gap: 48px;
+}
+
+@media (max-width: 900px) {
+  .main {
+    grid-template-columns: 1fr;
+  }
 }
 
 .logo {
@@ -75,11 +74,26 @@ h1 {
   margin-bottom: 16px;
   padding: 16px 24px;
   letter-spacing: -1px;
+  /* Round corner of each fact */
+  border-radius: 16px;
 
   /* Flexbox Settings */
   display: flex;
   align-items: center;
   gap: 24px;
+}
+
+/* 
+Use media query for respnsive design 
+this gets applied to all browser widths less than
+1200 pixels
+*/
+@media (max-width: 1200px) {
+  .fact {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+  }
 }
 
 .tag {
@@ -171,4 +185,59 @@ for the hover and active pseudo classes */
 .btn-category {
   width: 100%;
   background-image: none;
+}
+
+/* FORM */
+
+.fact-form {
+  background-color: #44403c;
+  margin-bottom: 40px;
+  padding: 16px 32px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-radius: 16px;
+}
+
+.fact-form input,
+.fact-form select {
+  max-width: 220px;
+  background-color: #78716c;
+  border: none;
+  border-radius: 100px;
+  padding: 16px;
+  font-size: 18px;
+  color: inherit;
+  font-family: inherit;
+}
+
+/* Pseudo element */
+.fact-form input::placeholder {
+  color: #a8a29e;
+}
+
+.fact-form input:first-child {
+  flex-grow: 1;
+}
+
+.fact-form span {
+  font-weight: 600;
+  font-size: 18px;
+  margin-right: 18px;
+}
+
+@media (max-width: 1000px) {
+  body {
+    padding: 32px 48px;
+  }
+
+  .fact-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .fact-form input,
+  .fact-form select {
+    width: auto;
+  }
 }
