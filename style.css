@@ -16,6 +16,11 @@ body {
   font-weight: 600;
 }
 
+/* Any element we apply this class to will be hidden */
+.hidden {
+  display: none !important;
+}
+
 /* MAIN LAYOUT */
 
 .container {
