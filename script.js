@@ -17,4 +17,14 @@ btn.addEventListener("click", function () {
 let votesInteresting = 23;
 let votesMindblowing = 5;
 const text = "Lisbon is the capital of Portugal";
+
+votesInteresting = votesInteresting + 2;
+votesInteresting++;
 console.log(votesInteresting);
+
+let totalUpvotes = votesInteresting + votesMindblowing;
+console.log("Upvotes", totalUpvotes);
+
+let votesFalse = 4;
+const isCorrect = votesFalse < totalUpvotes;
+console.log(isCorrect);
