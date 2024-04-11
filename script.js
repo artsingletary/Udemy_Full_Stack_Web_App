@@ -1,5 +1,3 @@
-console.log("Hello World!");
-
 const btn = document.querySelector(".btn-open");
 const form = document.querySelector(".fact-form");
 
@@ -14,6 +12,7 @@ btn.addEventListener("click", function () {
   }
 });
 
+/*
 let votesInteresting = 23;
 let votesMindblowing = 5;
 const text = "Lisbon is the capital of Portugal";
@@ -28,3 +27,20 @@ console.log("Upvotes", totalUpvotes);
 let votesFalse = 4;
 const isCorrect = votesFalse < totalUpvotes;
 console.log(isCorrect);
+*/
+
+function calcFactAge(year) {
+  const currentYear = new Date().getUTCFullYear();
+  const age = currentYear - year;
+  return age;
+}
+
+const age1 = calcFactAge(2015);
+console.log(age1);
+console.log(calcFactAge(2020));
+console.log(calcFactAge(1990));
+
+let votesInteresting = 20;
+let votesMindblowing = 20;
+
+if()
