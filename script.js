@@ -93,3 +93,19 @@ const str = `The current fact is "${text}" is ${calcFactAge(2015)} years old.
 It is probably ${totalUpvotes > votesFalse ? "correct" : "not true"}.`;
 console.log(str);
 */
+
+// Array with a string, integer and boolean.
+const fact = ["Lisbon is the capital of Portuagal", 2015, true];
+
+console.log(fact);
+console.log(fact[0]);
+console.log(fact[0].length);
+
+const [text, createdIn, isCorrect] = fact;
+console.log(createdIn);
+
+// Spreading, taking all elements from the fact array and adding them to
+// newfact and then adding another value.
+// You can only do this operation inside an array.
+const newfact = [...fact, "society"];
+console.log(newfact);
