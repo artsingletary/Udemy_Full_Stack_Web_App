@@ -13,7 +13,6 @@ btn.addEventListener("click", function () {
 });
 
 /*
-const text = "Lisbon is the capital of Portugal";
 
 votesInteresting = votesInteresting + 2;
 votesInteresting++;
@@ -32,7 +31,7 @@ function calcFactAge(year) {
   const age = currentYear - year;
 
   if (age >= 0) return age;
-  else return "Impossible year";
+  else return `Impossible year. Year needs to be less or equal ${currentYear}`;
 }
 
 const age1 = calcFactAge(2015);
@@ -41,6 +40,16 @@ console.log(calcFactAge(2020));
 console.log(calcFactAge(1990));
 console.log(calcFactAge(2037));
 
+// Use arrow function when you need a one line function
+// const calcFactAge2 = (year) => 2022 - year;
+
+const calcFactAge2 = (year) =>
+  year <= new Date().getFullYear() - year
+    ? new Date().getFullYear() - year
+    : `impossible year.  Year needs to be less or 
+ equal ${new Date().getFullYear()}`;
+
+/*
 let votesInteresting = 20;
 let votesMindblowing = 23;
 
@@ -70,3 +79,17 @@ const message =
     : "Might be false, check more sources";
 
 console.log(message);
+
+const text = "Lisbon is the capital of Portugal";
+
+// A method is a function being called on something, like a string
+// here toUpperCase is being called on text
+
+const upperText = text.toUpperCase();
+console.log(upperText);
+
+// Template literal
+const str = `The current fact is "${text}" is ${calcFactAge(2015)} years old.
+It is probably ${totalUpvotes > votesFalse ? "correct" : "not true"}.`;
+console.log(str);
+*/
